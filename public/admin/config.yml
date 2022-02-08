@@ -1,3 +1,4 @@
+local_backend: true
 backend:
   name: git-gateway
   branch: main
@@ -87,7 +88,23 @@ collections:
                 name: "name"
                 widget: "string"
                 hint: "Tag name for displaying on the site"
-
+      - name: "categories"
+        label: "Authors"
+        file: "meta/categories.yml"
+        fields:
+          - name: categories
+            label: Categories
+            label_singular: "Category"
+            widget: list
+            fields:
+              - label: "Slug"
+                name: "slug"
+                widget: "string"
+                hint: "The part of a URL identifies the category"
+              - label: "Name"
+                name: "name"
+                widget: "string"
+                hint: "First and Last"
   - name: "posts"
     label: "Posts"
     folder: "content/posts/"
@@ -120,6 +137,16 @@ collections:
         displayFields:
           - "authors.*.name"
         valueField: "authors.*.slug"
+      - label: Category
+        name: "category"
+        widget: relation
+        collection: "meta"
+        file: "categories"
+        searchFields:
+          - "categories.*.name"
+        displayFields:
+          - "categories.*.name"
+        valueField: categories.*.slug"
       - label: Tags
         label_singular: "Tag"
         name: "tags"
