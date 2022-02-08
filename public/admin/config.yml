@@ -89,7 +89,7 @@ collections:
                 widget: "string"
                 hint: "Tag name for displaying on the site"
       - name: "categories"
-        label: "Authors"
+        label: "Categories"
         file: "meta/categories.yml"
         fields:
           - name: categories
