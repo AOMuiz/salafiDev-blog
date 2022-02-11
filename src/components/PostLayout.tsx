@@ -1,14 +1,12 @@
 import React from "react";
 import styles from "../../public/styles/content.module.css";
 import Author from "./Author";
-import Copyright from "./Copyright";
 import Date from "./Date";
 import Layout from "./Layout";
 import BasicMeta from "./meta/BasicMeta";
 import JsonLdMeta from "./meta/JsonLdMeta";
 import OpenGraphMeta from "./meta/OpenGraphMeta";
 import TwitterCardMeta from "./meta/TwitterCardMeta";
-import { SocialList } from "./SocialList";
 import TagButton from "./TagButton";
 import { getAuthor } from "../lib/authors";
 import { getTag } from "../lib/tags";
@@ -33,6 +31,8 @@ export default function PostLayout({
 }: Props) {
   const keywords = tags.map((it) => getTag(it).name);
   const authorName = getAuthor(author).name;
+  console.log(authorName);
+
   return (
     <Layout>
       <BasicMeta
@@ -72,7 +72,10 @@ export default function PostLayout({
               </div>
             </div>
           </header>
-          <div className={styles.content}>{children}</div>
+          <div className="prose prose-slate">
+            <div className={styles.content}>{children}</div>
+          </div>
+
           <ul className={"tag-list"}>
             {tags.map((it, i) => (
               <li key={i}>
@@ -81,18 +84,12 @@ export default function PostLayout({
             ))}
           </ul>
         </article>
-        <footer>
-          <div className={"social-list"}>
-            <SocialList />
-          </div>
-          <Copyright />
-        </footer>
       </div>
       <style jsx>
         {`
           .container {
             display: block;
-            max-width: 36rem;
+            max-width: 40rem;
             width: 100%;
             margin: 0 auto;
             padding: 0 1.5rem;

@@ -91,6 +91,8 @@ collections:
       - name: "categories"
         label: "Categories"
         file: "meta/categories.yml"
+        description: "List of 
+        categories"
         fields:
           - name: categories
             label: Categories
@@ -139,7 +141,7 @@ collections:
         valueField: "authors.*.slug"
       - label: Category
         name: "category"
-        widget: relation
+        widget: list
         collection: "meta"
         file: "categories"
         searchFields:

@@ -8,84 +8,40 @@ export default function Navigation() {
   const [active, setActive] = useState(false);
   return (
     <>
-      <Burger active={active} onClick={() => setActive(!active)} />
-      <div className={"container " + (active ? "active" : "")}>
-        <ul>
-          <li>
+      <div className="container mx-auto mb-8 px-5 lg:px-10">
+        <div className="inline-block w-full border-b border-blue-400 py-8">
+          <div className="block bg-gradient-to-r from-red-400 via-blue-500 to-red-600 bg-clip-text md:float-left">
             <Link href="/">
-              <a className={router.pathname === "/" ? "active" : null}>about</a>
+              <span className="cursor-pointer text-3xl font-bold text-transparent lg:text-4xl">
+                SalafiBlog
+              </span>
             </Link>
-          </li>
-          <li>
+          </div>
+          <div className="hidden md:float-left md:contents">
             <Link href="/posts">
-              <a
-                className={
-                  router.pathname.startsWith("/posts") ? "active" : null
-                }
-              >
-                blog
+              <span className="mt-2 ml-4 cursor-pointer align-middle font-semibold md:float-right">
+                Blog
+              </span>
+            </Link>
+            <Link href="/">
+              <a>
+                <span className="mt-2 ml-4 cursor-pointer align-middle font-semibold md:float-right">
+                  About
+                </span>
               </a>
             </Link>
-          </li>
-        </ul>
-        <style jsx>
-          {`
-            .container {
-              width: 0;
-            }
-            ul {
-              opacity: 0;
-              width: 100%;
-              height: 100vh;
-              text-align: right;
-              list-style: none;
-              margin: 0;
-              padding: 0;
-              position: fixed;
-              top: 0;
-              background-color: #fff;
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              z-index: 1;
-              transform: translateY(100%);
-              transition: opacity 200ms;
-            }
-            .active ul {
-              opacity: 1;
-              transform: translateY(0);
-            }
-            li {
-              margin-bottom: 1.75rem;
-              font-size: 2rem;
-              padding: 0 1.5rem 0 0;
-            }
-            li:last-child {
-              margin-bottom: 0;
-            }
-            .active {
-              color: #222;
-            }
-
-            @media (min-width: 769px) {
-              .container {
-                width: 7rem;
-                display: block;
-              }
-              ul {
-                opacity: 1;
-                width: 7rem;
-                top: auto;
-                display: block;
-                transform: translateY(0);
-              }
-              li {
-                font-size: 1rem;
-                padding: 0;
-              }
-            }
-          `}
-        </style>
+            <a>
+              <span className="mt-2 ml-4 cursor-pointer align-middle font-semibold md:float-right">
+                Contact
+              </span>
+            </a>
+            <a>
+              <span className="mt-2 ml-4 cursor-pointer align-middle font-semibold md:float-right">
+                React
+              </span>
+            </a>
+          </div>
+        </div>
       </div>
     </>
   );

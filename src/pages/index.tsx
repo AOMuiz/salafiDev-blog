@@ -10,7 +10,7 @@ export default function Index() {
       <BasicMeta url={"/"} />
       <OpenGraphMeta url={"/"} />
       <TwitterCardMeta url={"/"} />
-      <div className="container">
+      <div className="container mx-auto">
         <div>
           <h1>
             Hi, We're Next.js & Netlify<span className="fancy">.</span>
@@ -22,9 +22,9 @@ export default function Index() {
       </div>
       <style jsx>{`
         .container {
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: center !important;
           flex: 1 1 auto;
           padding: 0 1.5rem;
         }

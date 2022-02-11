@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Footer from "./footer";
 import Navigation from "./Navigation";
 
 type Props = {
@@ -6,7 +7,7 @@ type Props = {
 };
 export default function Layout({ children }: Props) {
   return (
-    <div className="root">
+    <div>
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -18,29 +19,7 @@ export default function Layout({ children }: Props) {
         <Navigation />
       </nav>
       <main>{children}</main>
-      <style jsx>
-        {`
-          .root {
-            display: block;
-            padding: 4rem 0;
-            box-sizing: border-box;
-            height: 100%;
-          }
-          main {
-            display: flex;
-            min-height: 100%;
-          }
-          @media (min-width: 769px) {
-            .root {
-              display: flex;
-              flex: 1 0 auto;
-            }
-            main {
-              flex: 1 0 auto;
-            }
-          }
-        `}
-      </style>
+      <Footer />
     </div>
   );
 }

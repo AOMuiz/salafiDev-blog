@@ -2,10 +2,12 @@
 slug: "markdown-syntax"
 title: "Markdown Syntax Guide"
 date: 2020-06-09
-author: wutali
+author: AOMuiz
 tags:
   - style
   - markdown
+category:
+  - Snippets
 ---
 
 This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in MDX.
@@ -85,6 +87,23 @@ Tables aren't part of the core Markdown spec, but Hugo supports supports them ou
     <p>Test</p>
   </body>
 </html>
+```
+
+#### JSX
+
+```js
+export default function Index({ posts, tag, pagination, page }: Props) {
+  const url = `/posts/tags/${tag.name}` + (page ? `/${page}` : "");
+  const title = tag.name;
+  return (
+    <Layout>
+      <BasicMeta url={url} title={title} />
+      <OpenGraphMeta url={url} title={title} />
+      <TwitterCardMeta url={url} title={title} />
+      <TagPostList posts={posts} tag={tag} pagination={pagination} />
+    </Layout>
+  );
+}
 ```
 
 #### Code block indented with four spaces
