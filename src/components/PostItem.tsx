@@ -18,7 +18,9 @@ export default function PostItem({ post }: Props) {
             <div className="flex justify-between">
               <Date date={parseISO(post.date)} />
               <Link href={`/post/${post.slug}`}>
-                <p className="text-gray-500 text-medium">In React</p>
+                <p className="text-gray-500 text-medium">
+                  {post.category ? `In ${post.category}` : ""}
+                </p>
               </Link>
             </div>
             <h5 className="mt-2 text-xl font-bold text-white">{post.title}</h5>

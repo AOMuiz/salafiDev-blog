@@ -10,12 +10,14 @@ import TwitterCardMeta from "./meta/TwitterCardMeta";
 import TagButton from "./TagButton";
 import { getAuthor } from "../lib/authors";
 import { getTag } from "../lib/tags";
+import { getCategory } from "../lib/categories";
 
 type Props = {
   title: string;
   date: Date;
   slug: string;
   tags: string[];
+  category: string;
   author: string;
   description?: string;
   children: React.ReactNode;
@@ -72,7 +74,7 @@ export default function PostLayout({
               </div>
             </div>
           </header>
-          <div className="prose prose-slate">
+          <div className="prose prose-slate prose-code:bg-zinc-900">
             <div className={styles.content}>{children}</div>
           </div>
 

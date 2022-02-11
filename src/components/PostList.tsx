@@ -14,6 +14,7 @@ type Props = {
   };
 };
 export default function PostList({ posts, tags, pagination }: Props) {
+  console.log("posts", posts);
   return (
     <div className="container mx-auto px-5 lg:px-10">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 ">
