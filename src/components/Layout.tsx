@@ -7,7 +7,7 @@ type Props = {
 };
 export default function Layout({ children }: Props) {
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -18,7 +18,7 @@ export default function Layout({ children }: Props) {
       <nav>
         <Navigation />
       </nav>
-      <main>{children}</main>
+      <main className="flex-auto">{children}</main>
       <Footer />
     </div>
   );

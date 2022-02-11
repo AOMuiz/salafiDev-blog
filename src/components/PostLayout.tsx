@@ -74,7 +74,7 @@ export default function PostLayout({
               </div>
             </div>
           </header>
-          <div className="prose prose-slate prose-code:bg-zinc-900">
+          <div className="prose prose-slate prose-code:bg-red-700 lg:prose-xl">
             <div className={styles.content}>{children}</div>
           </div>
 

@@ -13,18 +13,22 @@ export default function Index() {
       <div className="container mx-auto">
         <div>
           <h1>
-            Hi, We're Next.js & Netlify<span className="fancy">.</span>
+            Hi, We're a Team of Salafi Developers
+            <span className="fancy">.</span>
           </h1>
-          <span className="handle">@nextjs-netlify-blog</span>
-          <h2>A blog template with Next.js and Netlify.</h2>
-          <SocialList />
+          <span className="handle">@salafiDev</span>
+          <h3 className="text-lg">
+            Writing about technical things, CSS, content management, and page
+            speed.
+          </h3>
+          {/* <SocialList /> */}
         </div>
       </div>
       <style jsx>{`
         .container {
-          display: flex !important;
-          align-items: center !important;
-          justify-content: center !important;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           flex: 1 1 auto;
           padding: 0 1.5rem;
         }
