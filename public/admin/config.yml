@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: proxy
+  proxy_url: http://localhost:8081/api/v1
   branch: main
 local_backend: true
 media_folder: public/images
@@ -91,8 +92,7 @@ collections:
       - name: "categories"
         label: "Categories"
         file: "meta/categories.yml"
-        description: "List of 
-        categories"
+        description: "List of categories"
         fields:
           - name: categories
             label: Categories
