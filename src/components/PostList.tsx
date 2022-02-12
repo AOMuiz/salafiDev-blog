@@ -17,7 +17,7 @@ type Props = {
 export default function PostList({ posts, tags, pagination }: Props) {
   // console.log("posts", posts);
   return (
-    <div className="container mx-auto px-5 lg:px-10 divide-y">
+    <div className="container mx-auto px-5 lg:px-10">
       <div className="space-y-2 pt-6 pb-8 md:space-y-5">
         <PageTitle>All Posts</PageTitle>
       </div>
