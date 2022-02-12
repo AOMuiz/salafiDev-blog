@@ -20,7 +20,7 @@ export default function Index() {
           <h3 className="text-xl">
             <b>We're a Team of Salafi Software Developers.</b>
           </h3>
-          <h4 className="mt-2 text-center">
+          <h4 className="mt-2 text-justify">
             This is our Digital space. You will find writings about technical
             things, CSS, content management, page speed and things we find
             interesting.
