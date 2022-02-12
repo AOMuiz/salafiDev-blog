@@ -14,7 +14,7 @@ export default function Pagination({ current, pages, link }: Props) {
   return (
     <ul className="flex items-center space-x-1 cursor-pointer">
       {pagination.map((it, i) => (
-        <Link href={link.href(it.page)} as={link.as(it.page)}>
+        <Link href={link.href(it.page)} as={link.as(it.page)} key={i}>
           <li
             key={i}
             className="px-4 py-2 text-gray-700 bg-gray-200 rounded-md hover:bg-blue-400 hover:text-white"
