@@ -140,7 +140,7 @@ collections:
         valueField: "authors.*.slug"
       - label: Category
         name: "category"
-        widget: list
+        widget: relation
         collection: "meta"
         file: "categories"
         searchFields:
