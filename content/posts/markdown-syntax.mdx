@@ -90,7 +90,7 @@ Tables aren't part of the core Markdown spec, but Hugo supports them out-of-the-
 
 #### JSX
 
-```js
+```jsx
 export default function Index({ posts, tag, pagination, page }: Props) {
   const url = `/posts/tags/${tag.name}` + (page ? `/${page}` : "");
   const title = tag.name;

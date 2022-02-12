@@ -2,10 +2,15 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import Burger from "./Burger";
 import { useState } from "react";
+import { getCategory, listCategory } from "../lib/categories";
 
 export default function Navigation() {
   const router = useRouter();
   const [active, setActive] = useState(false);
+  // let categories = listCategory();
+  // let getCat = getCategory("react");
+  // console.log(getCat);
+  // console.log(categories);
   return (
     <>
       <div className="container mx-auto mb-8 px-5 lg:px-10">
@@ -20,7 +25,7 @@ export default function Navigation() {
           <div className="hidden md:float-left md:contents">
             <Link href="/posts">
               <span className="mt-2 ml-4 cursor-pointer align-middle font-semibold md:float-right">
-                Blog
+                Articles
               </span>
             </Link>
             <Link href="/">

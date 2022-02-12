@@ -8,8 +8,8 @@ type Props = {
 };
 
 export default function PostItem({ post }: Props) {
-  console.log(post.tags);
-  console.log(post);
+  // console.log(post.tags);
+  // console.log(post);
   return (
     <Link href={"/posts/" + post.slug}>
       <article className="first-line:rounded-2xl bg-gradient-to-r from-red-400 to-red-600 p-1 shadow-xl cursor-pointer rounded-xl">

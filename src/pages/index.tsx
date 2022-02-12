@@ -13,14 +13,18 @@ export default function Index() {
       <div className="container mx-auto">
         <div>
           <h1>
-            Hi, We're a Team of Salafi Developers
+            Hi, Welcome to Our Digital Garden
             <span className="fancy">.</span>
           </h1>
           <span className="handle">@salafiDev</span>
-          <h3 className="text-lg">
-            Writing about technical things, CSS, content management, and page
-            speed.
+          <h3 className="text-xl">
+            <b>We're a Team of Salafi Software Developers.</b>
           </h3>
+          <h4 className="mt-2 text-center">
+            This is our Digital space. You will find writings about technical
+            things, CSS, content management, page speed and things we find
+            interesting.
+          </h4>
           {/* <SocialList /> */}
         </div>
       </div>

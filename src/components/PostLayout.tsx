@@ -33,7 +33,7 @@ export default function PostLayout({
 }: Props) {
   const keywords = tags.map((it) => getTag(it).name);
   const authorName = getAuthor(author).name;
-  console.log(authorName);
+  // console.log(authorName);
 
   return (
     <Layout>
@@ -74,7 +74,7 @@ export default function PostLayout({
               </div>
             </div>
           </header>
-          <div className="prose prose-slate prose-code:bg-red-700 lg:prose-xl">
+          <div className="prose prose-slate prose-code:bg-red-700 lg:prose-lg">
             <div className={styles.content}>{children}</div>
           </div>
 
